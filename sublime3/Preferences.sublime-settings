@@ -1,0 +1,76 @@
+{
+	"alignment_chars":
+	[
+		"=",
+		":"
+	],
+	"alignment_space_chars":
+	[
+		"=",
+		":"
+	],
+	"binary_file_patterns":
+	[
+		"*.sublime-workspace",
+		"tags",
+		"*.min.js",
+		"*.svg",
+		"sprockets*",
+		"screenshot_*"
+	],
+	"color_scheme": "Packages/IceWorld Color Scheme/Dark.tmTheme",
+	"draw_white_space": "selection",
+	"file_exclude_patterns":
+	[
+		"*.scssc",
+		"*.sassc",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		".sass-cache",
+		"tmp",
+		"capybara",
+		"/migrate-"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Emmet",
+		"Theme - Soda",
+		"Vintage",
+		"Dayle Rees Color Schemes"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"soda_folder_icons": true,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true
+}
