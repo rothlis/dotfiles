@@ -12,12 +12,22 @@ alias zshconfig="sublime ~/.zshrc"
 alias ohmyzsh="sublime ~/.oh-my-zsh"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
+alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
+
 alias chrono:locales:admin="localeapp pull | rake locales:admin:to_json"
 alias chrono:locales:public="localeapp pull | rake locales:public:to_json"
 
-alias chrono:deploy:staging="git pull; git push; git push staging develop:master; heroku run rake db:migrate --app chronogolf-staging; heroku restart --app chronogolf-staging"
-alias chrono:deploy:demo="git pull; git push; git push demo master; heroku run rake db:migrate --app chronogolf-demo; heroku restart --app chronogolf-demo"
-alias chrono:deploy:production="git pull; git push; git push production master; heroku run rake db:migrate --app chronogolf; heroku restart --app chronogolf"
+alias chrono:deploy:staging="git pull; git push; git push staging develop:master; heroku run rake db:migrate --remote staging; heroku restart --remote staging"
+alias chrono:deploy:demo="git pull; git push; git push demo master; heroku run rake db:migrate --remote demo; heroku restart --remote demo"
+alias chrono:deploy:production="git pull; git push; git push production master; heroku run rake db:migrate --remote production; heroku restart --remote production"
+
+alias rails:console:staging="heroku run rails c --remote staging"
+alias rails:console:demo="heroku run rails c --remote demo"
+alias rails:console:production="heroku run rails c --remote production"
+
+alias rails:logs:staging="heroku logs -t --remote staging"
+alias rails:logs:demo="heroku logs -t --remote demo"
+alias rails:logs:production="heroku logs -t --remote production"
 
 alias rails:server:start="puma -p 5000"
 alias rails:worker:start="bundle exec rake jobs:work"
@@ -40,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git github ruby rvm bower brew bundler common-aliases last-working-dir npm sublime)
+plugins=(rails git github ruby rvm brew npm sublime)
 
 source $ZSH/oh-my-zsh.sh
 

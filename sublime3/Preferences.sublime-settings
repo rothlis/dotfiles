@@ -52,16 +52,18 @@
 		".sass-cache",
 		"tmp",
 		"capybara",
+		"node_modules",
 		"/migrate-"
 	],
 	"font_face": "Source Code Pro",
-	"font_size": 13,
+	"font_size": 12,
 	"ignored_packages":
 	[
-		"Emmet",
+		"Dayle Rees Color Schemes",
 		"Theme - Soda",
 		"Vintage",
-		"Dayle Rees Color Schemes"
+		"SublimeLinter",
+		"Emmet"
 	],
 	"indent_guide_options":
 	[
