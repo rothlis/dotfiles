@@ -1,25 +1,48 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# JAVA_HOME
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# RVM
+[[ -s "/Users/rothlis/.rvm/scripts/rvm" ]] && source "/Users/rothlis/.rvm/scripts/rvm"
+
+# NVM
+[[ -s /Users/rothlis/.nvm/nvm.sh ]] && . /Users/rothlis/.nvm/nvm.sh # This loads NVM
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# PATH
+export PATH=$PATH/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/bsin:/usr/local/bin:/usr/X11/bin:/Users/rothlis/.rvm/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
+# CUSTOM Chronogolf
+export TEST_ASSETS_TAGS_PATH="assets_tags/src/"
+
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Example aliases
+# ALIASES
 alias zshconfig="st ~/.zshrc"
 alias ohmyzsh="st ~/.oh-my-zsh"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
-alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
-
-alias chrono:locales:admin="localeapp pull | rake locales:admin:to_json"
-alias chrono:locales:public="localeapp pull | rake locales:public:to_json"
-
 alias chrono:deploy:staging="git pull; git push; git push staging develop:master; heroku run rake db:migrate --remote staging; heroku restart --remote staging"
 alias chrono:deploy:demo="git pull; git push; git push demo master; heroku run rake db:migrate --remote demo; heroku restart --remote demo"
 alias chrono:deploy:production="git pull; git push; git push production master; heroku run rake db:migrate --remote production; heroku restart --remote production"
+
+alias chrono:preboot:production:enable="heroku features:enable -a chronogolf preboot"
+alias chrono:preboot:production:disable="heroku features:disable -a chronogolf preboot"
+alias chrono:preboot:demo:enable="heroku features:enable -a chronogolf-demo preboot"
+alias chrono:preboot:demo:disable="heroku features:disable -a chronogolf-demo preboot"
+
+alias chrono:maintenance:production:enable="heroku maintenance:on -a chronogolf"
+alias chrono:maintenance:production:disable="heroku maintenance:off -a chronogolf"
+alias chrono:maintenance:demo:enable="heroku maintenance:on -a chronogolf-demo"
+alias chrono:maintenance:demo:disable="heroku maintenance:off -a chronogolf-demo"
 
 alias rails:console:staging="heroku run rails c --remote staging"
 alias rails:console:demo="heroku run rails c --remote demo"
@@ -50,15 +73,6 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git github ruby rvm brew npm sublime)
+plugins=(rails git github ruby rvm brew npm sublime zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/bsin:/usr/local/bin:/usr/X11/bin:/Users/rothlis/.rvm/bin:/Applications/Postgres.app/Contents/MacOS/bin
-
-# RVM
-[[ -s "/Users/rothlis/.rvm/scripts/rvm" ]] && source "/Users/rothlis/.rvm/scripts/rvm"
-
-# NVM
-[[ -s /Users/rothlis/.nvm/nvm.sh ]] && . /Users/rothlis/.nvm/nvm.sh # This loads NVM
