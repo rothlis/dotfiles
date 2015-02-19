@@ -13,11 +13,14 @@
 	[
 		"*.sublime-workspace",
 		"tags",
-		"*.min.js",
-		"*.svg",
 		"sprockets*",
-		"screenshot_*"
+		"screenshot_*",
+		"*.png",
+		"*.jpg",
+		"*.woff"
 	],
+	"caret_extra_width": 1,
+	"caret_style": "phase",
 	"color_scheme": "Packages/IceWorld Color Scheme/Dark.tmTheme",
 	"draw_white_space": "selection",
 	"file_exclude_patterns":
@@ -42,7 +45,11 @@
 		".DS_Store",
 		"*.class",
 		"*.psd",
-		"*.db"
+		"*.db",
+		"*.min.js",
+		"scripts-*.js",
+		"vendor-*.js",
+		"*.svg"
 	],
 	"folder_exclude_patterns":
 	[
@@ -52,27 +59,31 @@
 		".sass-cache",
 		"tmp",
 		"capybara",
-		"node_modules",
-		"/migrate-"
+		"node_modules"
 	],
 	"font_face": "Source Code Pro",
-	"font_size": 12,
+	"font_size": 13,
+	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Dayle Rees Color Schemes",
-		"Theme - Soda",
+		"Emmet",
 		"Vintage",
 		"SublimeLinter",
-		"Emmet"
+		"Dayle Rees Color Schemes",
+		"Theme - Soda"
 	],
 	"indent_guide_options":
 	[
 		"draw_normal",
 		"draw_active"
 	],
-	"soda_folder_icons": true,
+	"overlay_scroll_bars": "enabled",
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"show_full_path": false,
 	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
+	"theme": "predawn.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_automatic_white_space": true
+	"trim_automatic_white_space": true,
+	"word_wrap": true
 }

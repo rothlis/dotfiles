@@ -8,8 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Example aliases
-alias zshconfig="sublime ~/.zshrc"
-alias ohmyzsh="sublime ~/.oh-my-zsh"
+alias zshconfig="st ~/.zshrc"
+alias ohmyzsh="st ~/.oh-my-zsh"
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 alias gcb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
@@ -55,7 +55,7 @@ plugins=(rails git github ruby rvm brew npm sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/bsin:/usr/local/bin:/usr/X11/bin:/Users/rothlis/.rvm/bin:/Applications/Postgres.app/Contents/MacOS/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/bsin:/usr/local/bin:/usr/X11/bin:/Users/rothlis/.rvm/bin:/Applications/Postgres.app/Contents/MacOS/bin
 
 # RVM
 [[ -s "/Users/rothlis/.rvm/scripts/rvm" ]] && source "/Users/rothlis/.rvm/scripts/rvm"
