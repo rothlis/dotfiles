@@ -1,28 +1,84 @@
 {
-  "alignment_chars"            : ["=", ":"],
-  "alignment_space_chars"      : ["=", ":"],
-  "binary_file_patterns"       : ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "*.woff"],
-  "caret_extra_width"          : 1,
-  "caret_style"                : "phase",
-  "theme"                      : "Material-Theme.sublime-theme",
-  "color_scheme"               : "Packages/Material Theme/schemes/Material-Theme.tmTheme",
-  "draw_white_space"           : "selection",
-  "file_exclude_patterns"      : ["*.sublime-workspace", "*.scssc", "*.sassc", ".DS_Store", "*.psd", "*.db", "*.svg", "*.min.js", "scripts-*.js", "vendor-*.js", "application-*.css"],
-  "folder_exclude_patterns"    : [".svn", ".git", ".hg", ".sass-cache", "tmp", "capybara", "node_modules"],
-  "font_face"                  : "Source Code Pro",
-  "font_size"                  : 14,
-  "highlight_line"             : true,
-  "indent_guide_options"       : ["draw_normal", "draw_active"],
-  "overlay_scroll_bars"        : "enabled",
-  "rulers"                     : [80],
-  "scroll_past_end"            : true,
-  "scroll_speed"               : 5.0,
-  "show_full_path"             : false,
-  "tab_size"                   : 2,
-  "translate_tabs_to_spaces"   : true,
-  "trim_automatic_white_space" : true,
-  "word_wrap"                  : true,
-  "line_padding_top"           : 1,
-  "line_padding_bottom"        : 1,
-  "bold_folder_labels"         : true
+	"alignment_chars":
+	[
+		"=>",
+		"=",
+		":"
+	],
+	"alignment_space_chars":
+	[
+		"=>",
+		"=",
+		":"
+	],
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.woff",
+		"*.svg",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"bold_folder_labels": true,
+	"caret_extra_width": 1,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.log"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		".sass-cache",
+		"tmp",
+		"capybara",
+		"node_modules",
+		"dist"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"HtmlTidy",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"show_full_path": false,
+	"tab_size": 2,
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"word_wrap": true
 }
